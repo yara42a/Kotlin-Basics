@@ -28,6 +28,7 @@ class Todo{
     var tasks= arrayListOf<Task>()
     private set
 
+
     fun show(){
         for (i in tasks) {
             println(i)
@@ -42,12 +43,10 @@ class Todo{
         }
     }
     fun Add(task:Task){
-        val insert= arrayOf(task)
-        tasks.addAll(insert)
+        tasks.add(task)
     }
     fun remove(task:Task){
-        val delete= arrayOf(task)
-        tasks.removeAll(delete)
+        tasks.remove(task)
     }
     fun change(task:Task){
         if (task.isCompleted == true) {
